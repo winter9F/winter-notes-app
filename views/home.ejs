@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/home.css">
+
+<div class="container">
+
+    <h1>Hello World111</h1>
+
+    <%if(currentUser){%>
+        <a href="/user/<%=currentUser.id%>"><button class="btn">My Page</button></a>
+        <a href="/logout"><button>Log out</button></a>
+        <%}%>
+
+            <%if(!currentUser){%>
+                <a href="/login"><button class="btn">Login</button></a>
+                <a href="/register"><button class="btn">register</button></a>
+                <%}%>
+
+</div>
