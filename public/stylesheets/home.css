@@ -1,0 +1,182 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://res.cloudinary.com/dqggp5pir/image/upload/v1701709437/Note%20app/Note_app_wallpaper_zog7fa.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+h1 {
+    color: rgba(255, 255, 255, 0.795);
+    font-size: 100px;
+    margin-bottom: 70px;
+    font-family: 'Beau Rivage', cursive;
+    text-shadow: 5px 5px 5px #aaaaaac5;
+
+}
+
+button {
+
+    display: block;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    margin: 1px;
+    box-shadow: 0px 2px 4px black;
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-family: 'Teko', sans-serif;
+
+}
+
+button.pinkBtn {
+    color: white;
+    box-shadow: 0px 2px 4px black;
+    background-color: #dd1f6e;
+
+}
+
+button.pinkBtn:hover {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    transition: color .25s, background-color .25s;
+    cursor: pointer;
+}
+
+button.whiteBtn:hover {
+    color: white;
+    background-color: #dd1f6e;
+    transition: color .25s, background-color .25s;
+    cursor: pointer;
+}
+
+
+.btnSmall {
+    display: block;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    margin: 1px;
+    box-shadow: 0px 2px 4px black;
+    text-decoration: none;
+    width: 70px;
+    height: 35px;
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 22px;
+    font-family: 'Teko', sans-serif;
+}
+
+input {
+    font-size: 20px;
+    border-radius: 5px;
+    margin-bottom: 3px;
+    font-family: 'Teko', sans-serif;
+}
+
+
+
+
+
+
+
+#loginModalContainer {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+}
+
+#loginModalContainer.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+#loginModal {
+    background: linear-gradient(rgb(68, 4, 121), #af055aea);
+
+    text-align: center;
+    width: 500px;
+    height: 150px;
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding-top: 50px;
+
+}
+
+#loginBtn {
+    display: inline;
+}
+
+#loginClose {
+    display: inline;
+}
+
+#registerModalContainer {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+}
+
+#registerModalContainer.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+#registerModal {
+    background: linear-gradient(rgb(68, 4, 121), #af055aea);
+    text-align: center;
+    width: 400px;
+    height: 200px;
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding-top: 20px;
+
+}
+
+#registerBtn {
+    display: inline;
+}
+
+#registerClose {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+}

@@ -30,21 +30,29 @@ const isAuthor = async (req, res, next) => {
 
 
 
-router.get("/:id", catchAsync(async (req, res) => {
-    const { id } = req.params;
-    const post = await Note.find({ author: id });
-    const user = await User.findById(id);
-    res.render("userPage", { post, user, id });
+router.get("/", catchAsync(async (req, res) => {    //add :id to fix
+    const note = await Note.find();
+    res.render("userPage", { note });
 
 }));
 
+// router.get("/", catchAsync(async (req, res) => {    //add :id to fix
+//     const { id } = req.params;
+//     const post = await Note.find({ author: id });
+//     const user = await User.findById(id);
+//     res.render("userPage", { post, user, id });
 
-router.post("/", isLoggedIn, postLimiter, catchAsync(async (req, res, next) => {
-    const note = new Note(req.body);
-    note.author = req.user;
-    await note.save();
-    res.redirect("back");
-}));
+// }));
+
+
+router.post("/", //isLoggedIn, postLimiter, catchAsync
+    (async (req, res, next) => {
+        const note = new Note(req.body);
+        // note.author = req.user;
+        await note.save();
+
+        res.redirect("back");
+    }));
 
 
 router.put("/:id", isLoggedIn, isAuthor, catchAsync(async (req, res) => {

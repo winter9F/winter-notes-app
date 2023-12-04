@@ -1,17 +1,55 @@
-<link rel="stylesheet" href="/home.css">
+<% layout("layout/boilerplate") %>
+    <link rel="stylesheet" href="/stylesheets/home.css">
 
-<div class="container">
 
-    <h1>Hello World111</h1>
 
-    <%if(currentUser){%>
-        <a href="/user/<%=currentUser.id%>"><button class="btn">My Page</button></a>
-        <a href="/logout"><button>Log out</button></a>
-        <%}%>
+    <div class="container">
 
-            <%if(!currentUser){%>
-                <a href="/login"><button class="btn">Login</button></a>
-                <a href="/register"><button class="btn">register</button></a>
-                <%}%>
+        <h1>Hello Notes</h1>
 
-</div>
+        <%if(currentUser){%>
+
+            <a href="/logout"><button class="whiteBtn">Log out</button></a>
+            <%}%>
+
+                <%if(!currentUser){%>
+                    <a href="/user"><button class="pinkBtn">Notes</button></a>
+                    <button class="loginOpen pinkBtn" id="loginOpen">Login</button></a>
+                    <button class="whiteBtn" id="registerOpen">Register</button></a>
+                    <%}%>
+
+                        <div id="loginModalContainer">
+                            <div id="loginModal">
+                                <form action="/login" method="POST">
+                                    <input class="input" type="text" name="username" id="usernameLogin"
+                                        placeholder="Username">
+                                    <input class="input" type="password" name="password" id="passwordLogin"
+                                        placeholder="Password">
+                                    <br>
+                                    <button class="pinkBtn btnSmall" id="loginBtn">Login</button>
+                                    <button class="whiteBtn btnSmall" id="loginClose">Cancel</button>
+                                </form>
+
+                            </div>
+                        </div>
+
+                        <div id="registerModalContainer">
+                            <div id="registerModal">
+                                <form action="/register" method="POST">
+                                    <input type="text" name="username" id="usernameRegister" placeholder="Username">
+                                    <br>
+                                    <input type="email" name="email" id="emailRegister" placeholder="Email">
+                                    <br>
+                                    <input type="password" name="password" id="passwordRegister" placeholder="Password">
+                                    <br>
+                                    <button class="pinkBtn btnSmall" id="registerBtn">Submit</button>
+                                    <button class="whiteBtn btnSmall" id="registerClose">Cancel</button>
+                                </form>
+
+                            </div>
+                        </div>
+
+    </div>
+
+
+    <script src="/scripts/homeModals.js"></script>

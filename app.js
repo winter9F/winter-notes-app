@@ -28,7 +28,7 @@ const app = express();
 app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, "views"));
-app.use(express.static(path.join(__dirname, "stylesheets")));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
@@ -79,6 +79,10 @@ app.use("/user", userRouter)
 app.get("/", (req, res) => {
     res.render("home");
 });
+
+app.get("/trial", (req, res) => {
+    res.render("trialPage")
+})
 
 app.get("/logout", (req, res) => {
     try {
