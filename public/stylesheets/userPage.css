@@ -1,116 +1,183 @@
-body {
+.container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100%;
-    min-width: 100%;
+
+    text-align: start;
+
+
+    height: 1000px;
+    min-width: 512px;
+    max-width: 780px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px black;
+    background: linear-gradient(#ffd4e9ea, #ffb5daea);
+    padding: 10px;
     margin: 0;
+}
+
+.headerMain {
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 4px;
+    border-radius: 5px;
     background: linear-gradient(rgb(68, 4, 121), #af055aea);
+
+
 }
 
-
-.btn {
-    font-weight: 700;
+h1 {
+    color: rgba(255, 255, 255, 0.795);
+    font-size: 50px;
+    font-family: 'Beau Rivage', cursive;
+    text-shadow: 5px 5px 5px #aaaaaac5;
 }
 
-#modalContainer {
+.header2 {
+    display: flex;
+    justify-content: end;
 
+
+}
+
+#openNoteModal {
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Teko', sans-serif;
+}
+
+#settingsModal {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    pointer-events: none;
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-#modalContainer.show {
-    pointer-events: auto;
-    opacity: 1;
-}
-
-#noteModal {
     background-color: white;
     text-align: center;
-    width: 500px;
+    position: absolute;
+    opacity: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 1px;
+    margin: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+#settingsModal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+button.pinkBtn {
+    color: white;
+    box-shadow: 0px 2px 4px black;
+    background-color: #dd1f6e;
+
+}
+
+button.pinkBtn:hover {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    transition: color .25s, background-color .25s;
+    cursor: pointer;
+}
+
+button.whiteBtn:hover {
+    color: white;
+    background-color: #dd1f6e;
+    transition: color .25s, background-color .25s;
+    cursor: pointer;
+}
+
+.box {
+    flex-grow: 1;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.note {
+    display: inline-flex;
+    text-align: start;
+
+    background-color: rgb(255, 255, 255);
+    border-width: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 4px;
+
+    width: 300px;
+    height: 50px;
+
+
+}
+
+#noteModalCont {
+    display: flex;
+    height: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: height 0.3s ease;
+}
+
+#noteModalCont.show {
+
+    height: 100px;
+
+}
+
+
+#noteModal {
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    flex-grow: 1;
+    text-align: center;
+    height: 0;
     max-width: 100%;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: height 0.3s, padding 0.3s ease;
+
+}
+
+#noteModal.show {
+
+    height: 100px;
     padding: 20px;
 
 }
 
-#submitModal {
+#submitNoteModal {
     display: inline;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Teko', sans-serif;
 }
 
-#closeModal {
+#closeNoteModal {
     display: inline;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Teko', sans-serif;
 }
 
 #text {
     display: inline;
     border-radius: 5px;
-    width: 400px;
-    height: 100px;
+    width: 200px;
+    height: 25px;
     resize: none;
 
 }
 
 #date {
-
+    display: inline;
     border-radius: 5px;
-    width: 400px;
-
-    resize: none;
+    width: 200px;
+    height: 25px;
     margin-top: none;
-
-}
-
-.container {
-    display: flex;
-    align-items: center;
-
-    width: 80%;
-    height: 1000px;
-    max-width: 780px;
-    border-radius: 5px;
-    background-color: white;
-    box-shadow: 0px 2px 4px black;
-
-    margin: 5%;
-
-}
-
-.box {
-
-    background-color: rgb(201, 81, 81);
-    width: 100%;
-    border: 5px solid black;
-    border-radius: 5px;
-
-
-
-
-
-}
-
-.note {
-    display: inline-flex;
-
-    background-color: rgb(255, 255, 255);
-    border-color: black;
-    border-width: 10px;
-    border: 2px solid black;
-    border-radius: 5%;
-    padding: 4px;
-    margin: 2px;
-    width: 300px;
-    height: 50px;
-
 
 }

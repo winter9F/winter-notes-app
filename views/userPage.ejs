@@ -1,46 +1,76 @@
-<link rel="stylesheet" href="/stylesheets/userPage.css">
-<div class="container">
-    <div class="box">
-        <ul>
-            <%if(note.length){%>
-                <%for(let {text,date} of note){%>
-                    <li class="note">
-                        <%=text%>
-                            <%date%>
-                    </li>
-                    <%}%>
+<% layout("layout/boilerplate") %>
+    <link rel="stylesheet" href="/stylesheets/userPage.css">
+
+    <div class="container">
+        <div class="headerMain">
+            <div class="header">
+                <h1>"Name" Notes</h1>
+            </div>
+            <div class="header2">
+
+                <div id="settingsModal">
+                    <a href="/"><button>Home</button></a>
+                    <a href="/signout"><button>Sign out</button></a>
+                    <a href=""><button>Clear all Notes</button></a>
+                </div>
+
+                <div>
+                    <button class="pinkBtn" id="openNoteModal">New Note</button>
+                    <button class="whiteBtn" id="openSettingsModal"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                            <path
+                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                        </svg></button>
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <div id="noteModalCont">
+                <div id="noteModal">
+
+                    <form action="/user" method="POST">
+
+                        <textarea name="text" id="text" placeholder="New Note" cols="30" rows="10"
+                            maxlength="18"></textarea>
+                        <input type="datetime-local" name="date" id="date">
+                        <br>
+                        <button class="pinkBtn" id="submitNoteModal">Submit</button>
+                        <button class="whiteBtn" id="closeNoteModal">Cancel</button>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="box">
+
+
+            <ul>
+                <%if(note.length){%>
+                    <%for(let {text,date} of note){%>
+                        <li class="note">
+
+                            <%=text%>
+                                <%date%>
+                        </li>
                         <%}%>
-        </ul>
-    </div>
-    <div>
-        <%if(!note.length){%>
-            <img src="https://res.cloudinary.com/dqggp5pir/image/upload/v1701725759/Note%20app/Hello_Gif_anamyx.gif"
-                alt="">
+                            <%}%>
+            </ul>
+        </div>
+        <div>
+            <%if(!note.length){%>
+                <img src="https://res.cloudinary.com/dqggp5pir/image/upload/v1701725759/Note%20app/Hello_Gif_anamyx.gif"
+                    alt="">
 
 
-            <%}%>
-    </div>
-
-</div>
-
-<button id="openModal">Modal</button>
-
-
-<div id="modalContainer">
-
-    <div id="noteModal">
-
-        <form action="/user" method="POST">
-
-            <textarea name="text" id="text" placeholder="New Note" cols="30" rows="10" maxlength="18"></textarea>
-            <input type="datetime-local" name="date" id="date">
-            <br>
-            <button id="submitModal">Submit</button>
-            <button id="closeModal">Cancel</button>
-        </form>
-
+                <%}%>
+        </div>
 
     </div>
-</div>
 
-<script src="/scripts/modal.js"></script>
+
+
+
+
+    <script src="/scripts/userPageModals.js"></script>

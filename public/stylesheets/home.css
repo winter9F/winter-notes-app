@@ -1,13 +1,5 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://res.cloudinary.com/dqggp5pir/image/upload/v1701709437/Note%20app/Note_app_wallpaper_zog7fa.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 .container {
