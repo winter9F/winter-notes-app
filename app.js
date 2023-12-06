@@ -102,7 +102,7 @@ app.use((err, req, res, next) => {
 
     const { statusCode = 500 } = err;
     if (!err.message) err.message = "Something Went Wrong!"
-    req.flash("error", err.stack)
+    req.flash("error", err.message)
     console.log(err.message, err.stack)
     res.status(statusCode).redirect("back");
 });

@@ -1,9 +1,9 @@
-const loginModalContainer = document.querySelector("#loginModalContainer");
-const loginOpen = document.querySelector("#loginOpen");
-const loginClose = document.querySelector("#loginClose");
-const registerModalContainer = document.querySelector("#registerModalContainer");
-const registerOpen = document.querySelector("#registerOpen");
-const registerClose = document.querySelector("#registerClose");
+const loginModalContainer = document.getElementById("loginModalContainer");
+const loginOpen = document.getElementById("loginOpen");
+const loginClose = document.getElementById("loginClose");
+const registerModalContainer = document.getElementById("registerModalContainer");
+const registerOpen = document.getElementById("registerOpen");
+const registerClose = document.getElementById("registerClose");
 
 
 loginOpen.addEventListener("click", function () {

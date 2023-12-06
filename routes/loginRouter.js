@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
 
 router.post("/", passport.authenticate("local", { failureFlash: true, failureRedirect: "/login" }), (req, res) => {
     req.flash("success", "Successfully signed in!");
-    res.redirect("/")
+    res.redirect("/user")
 
 });
 
