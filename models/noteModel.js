@@ -7,7 +7,11 @@ const noteSchema = new mongoose.Schema({
     },
     date: {
         type: "Date"
+    },
+    noteColor: {
+        type: "String"
     }
+
 
 
 });

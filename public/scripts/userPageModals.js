@@ -1,8 +1,8 @@
 const settingsModal = document.getElementById("settingsModal");
 const openSettingsModal = document.getElementById("openSettingsModal");
-const noteModalCont = document.getElementById("noteModalCont");
-const openNoteModal = document.getElementById("openNoteModal");
-const closeNoteModal = document.getElementById("closeNoteModal");
+const noteModalCont2 = document.getElementById("noteModalCont2");
+const openNoteModal2 = document.getElementById("openNoteModal2");
+const closeNoteModal2 = document.getElementById("closeNoteModal2");
 
 
 openSettingsModal.addEventListener("click", function () {
@@ -18,18 +18,18 @@ document.addEventListener('click', (e) => {
 
 
 
-openNoteModal.addEventListener("click", function () {
-    if (!noteModalCont.classList.contains("show")) {
-        noteModalCont.classList.add("show");
-        noteModal.classList.add("show");
+openNoteModal2.addEventListener("click", function () {
+    if (!noteModalCont2.classList.contains("show")) {
+        noteModalCont2.classList.add("show");
+        noteModal2.classList.add("show");
     } else {
-        noteModalCont.classList.remove("show");
-        noteModal.classList.remove("show");
+        noteModalCont2.classList.remove("show");
+        noteModal2.classList.remove("show");
     }
 })
-closeNoteModal.addEventListener("click", (e) => {
-    noteModalCont.classList.remove("show");
-    noteModal.classList.remove("show");
+closeNoteModal2.addEventListener("click", (e) => {
+    noteModalCont2.classList.remove("show");
+    noteModal2.classList.remove("show");
     e.preventDefault();
 
 })

@@ -1,18 +1,15 @@
 .container {
     display: flex;
     flex-direction: column;
-
-    text-align: start;
-
-
-    height: 1000px;
+    flex-grow: 1;
+    height: 100vh;
+    max-width: 1500px;
     min-width: 512px;
-    max-width: 780px;
     border-radius: 5px;
     box-shadow: 0px 4px 8px black;
     background: linear-gradient(#ffd4e9ea, #ffb5daea);
     padding: 10px;
-    margin: 0;
+    margin: 50px;
 }
 
 .headerMain {
@@ -39,7 +36,23 @@ h1 {
 
 }
 
-#openNoteModal {
+h3 {
+    font-size: 30px;
+    font-family: 'Beau Rivage', cursive;
+}
+
+#userPageImg {
+    height: 250px;
+    width: 250px;
+
+}
+
+#openNoteModal2 {
+    font-size: 20px;
+    font-family: 'Teko', sans-serif;
+}
+
+#openSettingsModal {
     border-radius: 5px;
     font-size: 20px;
     font-family: 'Teko', sans-serif;
@@ -68,8 +81,19 @@ h1 {
 
 button.pinkBtn {
     color: white;
+    border: none;
+    border-radius: 5px;
     box-shadow: 0px 2px 4px black;
     background-color: #dd1f6e;
+
+}
+
+button.whiteBtn {
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px black;
+    background-color: #ffffff;
 
 }
 
@@ -77,6 +101,7 @@ button.pinkBtn:hover {
     color: rgb(0, 0, 0);
     background-color: #ffffff;
     transition: color .25s, background-color .25s;
+    box-shadow: 0 4px 8px black;
     cursor: pointer;
 }
 
@@ -84,10 +109,23 @@ button.whiteBtn:hover {
     color: white;
     background-color: #dd1f6e;
     transition: color .25s, background-color .25s;
+    box-shadow: 0 4px 8px black;
     cursor: pointer;
 }
 
 .box {
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 1;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.box2 {
+    display: flex;
+    justify-content: center;
     flex-grow: 1;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
@@ -97,21 +135,123 @@ button.whiteBtn:hover {
 
 .note {
     display: inline-flex;
-    text-align: start;
-
+    justify-content: space-between;
     background-color: rgb(255, 255, 255);
     border-width: 10px;
-    border: 2px solid black;
+    border: 0;
+    box-shadow: 0px 3px 7px;
     border-radius: 5px;
-    padding: 4px;
-
+    padding: 6px;
+    margin: 4px;
     width: 300px;
     height: 50px;
+    text-align: start;
+    font-family: 'Teko', sans-serif;
+    font-size: 18px;
 
 
 }
 
+.editBtn {
+    width: 27px;
+    height: 27px;
+    padding: 0;
+    border: 0;
+    border-radius: 5px;
+}
+
+.editBtn:hover {
+    color: rgb(255, 255, 255);
+    background-color: #01c722;
+    transition: color .25s, background-color .25s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.deleteBtn {
+    width: 27px;
+    height: 27px;
+    padding: 0;
+    border: 0;
+    border-radius: 5px;
+}
+
+.deleteBtn:hover {
+    color: rgb(255, 255, 255);
+    background-color: #c70101;
+    transition: color .25s, background-color .25s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.redNote {
+    background-color: rgb(151, 0, 0);
+
+}
+
+.blueNote {
+    background-color: rgb(47, 0, 255);
+
+}
+
+.greenNote {
+    background-color: rgb(0, 145, 19);
+
+}
+
+.yellowNote {
+    background-color: rgb(235, 192, 0);
+
+}
+
+.PurpleNote {
+    background-color: rgb(132, 11, 202);
+}
+
 #noteModalCont {
+    display: flex;
+    height: 100;
+
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: height 0.3s ease;
+}
+
+
+#noteModal {
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    flex-grow: 1;
+    text-align: center;
+    height: 100;
+    padding: 10px;
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: height 0.3s, padding 0.3s ease;
+
+}
+
+#submitNoteModal {
+    display: inline;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Teko', sans-serif;
+    margin-top: 3px;
+}
+
+#closeNoteModal {
+    display: inline;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Teko', sans-serif;
+}
+
+#noteModalCont2 {
     display: flex;
     height: 0;
     align-items: center;
@@ -120,14 +260,14 @@ button.whiteBtn:hover {
     transition: height 0.3s ease;
 }
 
-#noteModalCont.show {
+#noteModalCont2.show {
 
     height: 100px;
 
 }
 
 
-#noteModal {
+#noteModal2 {
     align-items: center;
     justify-content: center;
     background-color: white;
@@ -141,14 +281,23 @@ button.whiteBtn:hover {
 
 }
 
-#noteModal.show {
+#noteModal2.show {
 
     height: 100px;
     padding: 20px;
 
 }
 
-#submitNoteModal {
+#submitNoteModal2 {
+    display: inline;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Teko', sans-serif;
+    margin-top: 3px;
+}
+
+#closeNoteModal2 {
     display: inline;
     border: none;
     border-radius: 5px;
@@ -156,20 +305,34 @@ button.whiteBtn:hover {
     font-family: 'Teko', sans-serif;
 }
 
-#closeNoteModal {
-    display: inline;
-    border: none;
-    border-radius: 5px;
-    font-size: 20px;
-    font-family: 'Teko', sans-serif;
+#addRedNote {
+    accent-color: rgb(151, 0, 0);
+}
+
+#addBlueNote {
+    accent-color: rgb(47, 0, 255);
+}
+
+#addGreenNote {
+    accent-color: rgb(0, 145, 19);
+}
+
+#addYellowNote {
+    accent-color: rgb(235, 192, 0);
+}
+
+#addPurpleNote {
+    accent-color: rgb(132, 11, 202);
 }
 
 #text {
     display: inline;
     border-radius: 5px;
     width: 200px;
-    height: 25px;
+    height: 30px;
     resize: none;
+    font-size: 15px;
+    font-family: 'Teko', sans-serif;
 
 }
 
@@ -177,7 +340,12 @@ button.whiteBtn:hover {
     display: inline;
     border-radius: 5px;
     width: 200px;
-    height: 25px;
-    margin-top: none;
+    height: 30px;
+    font-size: 15px;
+    font-family: 'Teko', sans-serif;
 
+}
+
+label {
+    font-family: 'Teko', sans-serif;
 }

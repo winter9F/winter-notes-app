@@ -55,7 +55,7 @@ router.post("/", //isLoggedIn, postLimiter, catchAsync
     }));
 
 
-router.put("/:id", isLoggedIn, isAuthor, catchAsync(async (req, res) => {
+router.put("/:id", catchAsync(async (req, res) => {
     const { id } = (req.params);
     const note = await Note.findByIdAndUpdate(id, req.body);
     await note.save();
@@ -64,10 +64,11 @@ router.put("/:id", isLoggedIn, isAuthor, catchAsync(async (req, res) => {
 }));
 
 
-router.delete("/:id", isLoggedIn, catchAsync(async (req, res) => {
+router.delete("/:id", catchAsync(async (req, res) => {
     const { id } = (req.params);
+    console.log(id);
     await Note.findByIdAndDelete(id);
-    res.redirect("back");
+    res.redirect("/");
 
 }));
 
