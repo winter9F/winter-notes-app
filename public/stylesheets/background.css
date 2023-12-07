@@ -1,9 +1,11 @@
 body {
     display: flex;
+    height: 100%;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-repeat: no-repeat;
+
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://res.cloudinary.com/dqggp5pir/image/upload/v1701709437/Note%20app/Note_app_wallpaper_zog7fa.jpg);
     background-size: cover;
     background-position: center;
