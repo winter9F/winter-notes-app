@@ -10,7 +10,11 @@ const noteSchema = new mongoose.Schema({
     },
     noteColor: {
         type: "String"
-    }
+    },
+    author: {
+        type: "ObjectId",
+        ref: "User"
+    },
 
 
 

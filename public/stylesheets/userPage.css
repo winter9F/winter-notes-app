@@ -27,6 +27,7 @@ h1 {
     font-size: 50px;
     font-family: 'Beau Rivage', cursive;
     text-shadow: 5px 5px 5px #aaaaaac5;
+    padding-left: 6px;
 }
 
 .header2 {
@@ -42,6 +43,12 @@ h3 {
 }
 
 #userPageImg {
+    height: 250px;
+    width: 250px;
+
+}
+
+#notUserPageImg {
     height: 250px;
     width: 250px;
 
@@ -135,6 +142,7 @@ button.whiteBtn:hover {
 
 .note {
     display: inline-flex;
+    flex-direction: column;
     justify-content: space-between;
     background-color: rgb(255, 255, 255);
     border-width: 10px;
@@ -144,7 +152,6 @@ button.whiteBtn:hover {
     padding: 6px;
     margin: 4px;
     width: 300px;
-    height: 50px;
     text-align: start;
     font-family: 'Teko', sans-serif;
     font-size: 18px;
@@ -152,7 +159,21 @@ button.whiteBtn:hover {
 
 }
 
+.innerNote {
+    display: inline-flex;
+    justify-content: space-between;
+
+}
+
+.innerNote2 {
+    display: inline-flex;
+    font-size: 14px;
+
+
+}
+
 .editBtn {
+
     width: 27px;
     height: 27px;
     padding: 0;
@@ -169,6 +190,7 @@ button.whiteBtn:hover {
 }
 
 .deleteBtn {
+
     width: 27px;
     height: 27px;
     padding: 0;
@@ -190,7 +212,7 @@ button.whiteBtn:hover {
 }
 
 .blueNote {
-    background-color: rgb(47, 0, 255);
+    background-color: rgb(66, 38, 192);
 
 }
 

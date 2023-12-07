@@ -97,6 +97,10 @@ app.get("/logout", (req, res) => {
     }
 });
 
+app.all("*", (req, res, next) => {
+    next(new ExpressError("Page Not Found", 404))
+});
+
 
 app.use((err, req, res, next) => {
 
