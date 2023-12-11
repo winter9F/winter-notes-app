@@ -3,9 +3,11 @@
     justify-content: space-between;
     align-content: center;
     height: 30px;
+    width: 100vh;
+    padding: 10px;
+    border-radius: 5px;
     background-color: rgba(85, 241, 85, 0.600);
     position: sticky;
-    width: 100vh;
     opacity: 1;
     font-size: 20px;
     font-family: 'Teko', sans-serif;
@@ -21,9 +23,11 @@
     justify-content: space-between;
     align-content: center;
     height: 30px;
+    width: 100vh;
+    padding: 10px;
+    border-radius: 5px;
     background-color: rgba(250, 27, 11, 0.541);
     position: sticky;
-    width: 100vh;
     opacity: 1;
     font-size: 20px;
     box-shadow: 0;

@@ -6,7 +6,7 @@ const noteSchema = new mongoose.Schema({
         require: true,
     },
     date: {
-        type: "Date"
+        type: "String"
     },
     noteColor: {
         type: "String"
